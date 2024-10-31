@@ -31,8 +31,8 @@ const cropData = {
         rainy: { price: '₦380000 - ₦450000 per ton', image: 'image/yam.jpg' }
     },
     cassava: {
-        dry: { price: '₦150000 - ₦170000 per ton', image: 'image/casava-image.jpg' },
-        rainy: { price: '₦130000 - ₦150000 per ton', image: 'image/casava-image.jpg' }
+        dry: { price: '₦150000 - ₦170000 per ton', image: 'image/casa.jpeg' },
+        rainy: { price: '₦130000 - ₦150000 per ton', image: 'image/casa.jpeg' }
     },
     rice: {
         dry: { price: '₦170000 - ₦200000 per bag', image: 'image/rice.jpeg' },
@@ -117,24 +117,24 @@ document.addEventListener('DOMContentLoaded', () => {
 // Sample data for crops and prices across different regions in Nigeria
 const regionData = {
     north: [
-        { img:'image/rice.jpeg', crop: 'Millet', price: '₦420000 - ₦550000 per ton' },
-        { img:'image/yam.jpg', crop: 'Sorghum', price: '₦410000 - ₦450000 per ton' },
-        { img:'image/maize-image.jpeg', crop: 'Maize', price: '₦480000 - ₦560000 per ton' }
+        { img:'image/bag of millet.jpeg', crop: 'Millet', price: '₦420000 - ₦550000 per ton' },
+        { img:'image/sorghum.jpeg', crop: 'Sorghum', price: '₦410000 - ₦450000 per ton' },
+        { img:'image/maize.jpg', crop: 'Maize', price: '₦480000 - ₦560000 per ton' }
     ],
     south: [
-        { crop: 'Yam', price: '₦380000 - ₦450000 per ton' },
-        { crop: 'Cassava', price: '₦130000 - ₦150000 per ton' },
-        { crop: 'Oil Palm', price: '₦1,200 - ₦1,700 per litre' }
+        { img:'image/yam.jpg', crop: 'Yam', price: '₦380000 - ₦450000 per ton' },
+        { img:'image/casa.jpeg', crop: 'Cassava', price: '₦130000 - ₦150000 per ton' },
+        { img:'image/red palm.jpg', crop: 'Oil Palm', price: '₦1,200 - ₦1,700 per litre' }
     ],
     east: [
-        { crop: 'Cocoyam', price: '₦280000 - ₦300000 per ton' },
-        { crop: 'Rice', price: '₦150000 - ₦170000 per bag' },
-        { crop: 'Plantain', price: '₦2000 - ₦5000 per bunch' }
+        { img:'image/cocoyam.jpeg', crop: 'Cocoyam', price: '₦280000 - ₦300000 per ton' },
+        { img:'image/rice.jpeg', crop: 'Rice', price: '₦150000 - ₦170000 per bag' },
+        { img:'image/plantain.jpg', crop: 'Plantain', price: '₦2000 - ₦5000 per bunch' }
     ],
     west: [
-        { crop: 'Cocoa', price: '₦4500 - ₦7000 per kg' },
-        { crop: 'Maize', price: '₦550000 - ₦600000 per ton' },
-        { crop: 'Cassava', price: '₦530000 - ₦580000 per ton' }
+        { img:'image/cocoa.jpeg', crop: 'Cocoa', price: '₦4500 - ₦7000 per kg' },
+        { img:'image/maize.jpg', crop: 'Maize', price: '₦550000 - ₦600000 per ton' },
+        { img:'image/casa.jpeg', crop: 'Cassava', price: '₦530000 - ₦580000 per ton' }
     ]
 };
 
