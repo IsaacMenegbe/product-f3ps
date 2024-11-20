@@ -271,21 +271,32 @@ select {
 }
 
 /* Styling for the crop image */
+/* Styling for the crop image */
 .crop-image {
-    min-width: 20%;
-    max-width: 50%;
-    border-radius: 16px;
-    object-fit: cover;
+    max-width: 100%; /* Prevents image from exceeding the card width */
+    max-height: 100%; /* Ensures image stays within card height */
+    border-radius: 16px; /* Keeps rounded corners */
+    object-fit: cover; /* Maintains aspect ratio while filling the space */
+    display: block; /* Ensures proper layout within the card */
+    margin: 0 auto; /* Centers the image horizontally */
 }
- .card {
+
+/* Card styling */
+.card {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 15px;
-    height: 170px;
+    height: 200px; /* Slightly increase height for better content fit */
+    width: 180px; /* Ensure cards have consistent width */
     text-align: center;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    overflow: hidden; /* Prevent content from overflowing */
 }
 
  .card:hover {
