@@ -20,7 +20,7 @@ body {
 
 /* Navigation Bar Styling */
 header {
-    background: #ff7acc;
+    background: #1b5e20;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -29,7 +29,7 @@ header {
       top: 0;
       left: 0;
       width: 100%;
-      z-index: 100;
+      z-index: 1000;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     
 }
@@ -98,7 +98,7 @@ nav ul li:hover .dropdown {
 
 /* Hero Section Styling */
 #hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(image/Farming.webp);
+    background: linear-gradient(rgba(0, 0, 0, 0.68),rgba(0, 0, 0, 0.68)), url(image/Farming.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -110,21 +110,28 @@ nav ul li:hover .dropdown {
 
 #hero h1 {
     font-size: 48px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
+    font-family: sans-serif;
 }
+
 
 #hero p {
     font-size: 24px;
+    margin-bottom: 5rem;
 }
 
 #hero button {
-    background-color: #ffbd69;
-    color: #007acc;
+    background-color: #1b5e20;
+    color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 1rem 3rem;
     font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
+}
+#hero button:hover {
+    background-color: #1f5721;
+    transform: translateY(-5px);
 }
 
 /* Dashboard Section Styling */
@@ -133,7 +140,11 @@ nav ul li:hover .dropdown {
     font-family: Arial, sans-serif;
     margin: 20px;
 }
+#dashboard h2{
+    text-align: center;
+    font-size: 40px;
 
+}
 .filter-options {
     display: flex;
     flex-wrap: wrap;
@@ -152,27 +163,37 @@ select {
 
 .dashboard-cards {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around;
+}
+.cards{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-right: 10rem;
+    margin-bottom: 3rem;
+}
+.dashboard-cards img{
+    min-width: 20%;
+    max-width: 50%;
+    margin-right: 4rem;
 }
 
-.card {
+.dashboard-cards .card {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 15px;
-    width: 250px;
+    height: 100px;
     text-align: center;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
 
-.card:hover {
+.dashboard-cards .card:hover {
     transform: translateY(-5px);
 }
 
-.card img {
+.dashboard-cards .card img {
     max-width: 100%;
     height: auto;
     border-bottom: 1px solid #ccc;
@@ -184,19 +205,19 @@ select {
 /* styles.css */
 
 /* Map Section Styles */
-#map {
+#mapping {
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: rgb(223, 223, 223);
     border-radius: 8px;
     margin-top: 20px;
     text-align: center;
 }
 
-#map h2 {
+#mapping h2 {
     text-align: center;
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 20px;
-    color: #333;
+    color: #000000;
 }
 
 #mapContainer {
@@ -218,7 +239,7 @@ select {
 
 .dropdown-container label {
     font-size: 18px;
-    color: #555;
+    color: #000000;
 }
 
 #regionDropdown {
@@ -244,17 +265,31 @@ select {
     list-style-type: none;
     padding: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Center-align list items */
-    width: 100%;
+    flex-wrap: wrap; /* Ensure wrapping on overflow */
+    gap: 20px; /* Add spacing between items */
+    justify-content: center; /* Center align items */
 }
 
 /* Styling for the crop image */
 .crop-image {
-    width: 200px;
-    height: 200px;
+    min-width: 20%;
+    max-width: 50%;
     border-radius: 16px;
     object-fit: cover;
+}
+ .card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    height: 170px;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+ .card:hover {
+    transform: translateY(-5px);
 }
 
 /* Styling for crop information within the card */
@@ -267,6 +302,9 @@ select {
 /* Default: Hide the menu toggle for larger screens */
 .menu-toggle {
     display: none; /* Hide by default */
+}
+footer{
+    background-color: #1b5e20;
 }
 
 @media (max-width: 768px) {
@@ -323,14 +361,25 @@ select {
     }
 
     .dashboard-cards {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center-align cards */
+    }
+
+    .cards {
+        flex-direction: column; /* Align card and image in a column */
+        margin: 1rem 0; /* Reduce margin for better spacing */
+    }
+
+    .dashboard-cards img {
+        max-width: 80%; /* Adjust image size for smaller screens */
+        margin-bottom: 1rem; /* Add spacing between image and cards */
     }
 
     .card {
-        width: 100%;
-        max-width: 400px;
+        width: 90%; /* Full width for better spacing */
+        margin-bottom: 1rem;
     }
+
 
     #map {
         padding: 15px;
@@ -340,23 +389,22 @@ select {
         font-size: 20px;
     }
 
-    #mapContainer {
-        height: 300px;
-    }
-
     #priceTrends {
-        padding: 15px;
-    }
-
-    #priceTrends h3 {
-        font-size: 18px;
+        text-align: center;
+        padding: 1rem;
     }
 
     #trendingPricesList {
-        font-size: 14px;
+        flex-direction: column; /* Stack price trends vertically */
+        gap: 1rem;
     }
+
+    #mapContainer {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+
     footer {
-        background-color: #ff7acc; /* Optional background color */
+        background-color: #1b5e20; /* Optional background color */
         padding: 20px;
         text-align: center; /* Center the text horizontally */
         color: white;
@@ -372,9 +420,16 @@ select {
         gap: 10px;
     }
 
+    .dashboard-cards img {
+        max-width: 90%; /* Further reduce image size */
+    }
+
     .card {
-        width: 100%;
-        max-width: 300px;
+        width: 100%; /* Take up full width */
+    }
+
+    #priceTrends h3 {
+        font-size: 1.2em; /* Adjust heading size */
     }
 
     h2 {

@@ -33,7 +33,7 @@
                     <ul class="dropdown">
                         <li><a href="#dashboard">Dashboard</a></li>
                         <li><a href="#mapping">Mapping</a></li>
-                        <li><a href="#alerts">Real-Time Alerts</a></li>
+                        <li><a href="#priceTrends">Real-Time Alerts</a></li>
                     </ul>
                 </li>
                 <li>
@@ -55,7 +55,7 @@
         <div class="hero-content">
             <h1>Welcome to PROJECT F3PS</h1>
             <p>Predict farm produce prices with accuracy and plan ahead.</p>
-            <button id="get-started-button" onclick="location.href='#dashboard'">Get Start</button>
+            <button id="get-started-button" onclick="location.href='#dashboard'">Get Started</button>
         </div>
     </section>
 
@@ -83,8 +83,10 @@
         </div>
     
         <div class="dashboard-cards">
+            <div class="cards">
+            <img src=/maize-image.jpeg alt="Selected Crop" id="crop-image">
+            <div class="cardss">
             <div class="card">
-                <img src=/maize-image.jpeg alt="Selected Crop" id="crop-image">
                 <h3 id="crop-title">Maize - Predicted Price</h3>
                 <p id="price-dry">₦100000 - ₦120000 per bag (Dry Season)</p>
                 <p id="price-rainy">₦80000 - ₦100000 per bag (Rainy Season)</p>
@@ -94,6 +96,8 @@
                 <h3>Election Year Impact</h3>
                 <p>Price Fluctuation: +10% (Typical election year)</p>
             </div>
+        </div>
+        </div>
         </div>
     </section>
     
